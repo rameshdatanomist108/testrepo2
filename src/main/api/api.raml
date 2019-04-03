@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: fedreserve
+version: v1
+baseUri: http://localhost:8081/
+protocols: [HTTP]
+/fedreserve:
+  /{reportname}:
+    get:
+      description: Retrieve List of series numbers
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "success": true,
+                  "status": 200
+                }
